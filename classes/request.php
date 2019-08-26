@@ -42,8 +42,8 @@ class request implements I_request{
         require_once("index.php");//maybe index.php is good too, but its not the one in the root
     }
 
-    public function exit_application(){
-        $this->_exit("goodbye ");
+    public function exit_application($string){
+        $this->_exit($string);
     }
 
     //************ private *************//

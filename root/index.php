@@ -7,6 +7,8 @@ require_once("../interfaces/I_registry.php");
 require_once("../classes/request.php");
 require_once("../classes/regedit.php");
 
+$out = "Application served.";
+
 $request = new request();//this is a request to this website
 $request->write_php_ini();
 $request->write_htaccess();//require https, stop url script injection, keep app views on the front page
@@ -18,7 +20,7 @@ regedit::clean_root();
 //back to the request
 $request->application_root();
 $request->start_application();
-$request->exit_application();
+$request->exit_application($out);
 
 //************functions*************//
 

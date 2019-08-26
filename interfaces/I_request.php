@@ -15,7 +15,7 @@ interface I_request{
 
     public function start_application();//include the index file for the site application
 
-    public function exit_application();//end application execution with a recursive exit() function, like yo_exit
+    public function exit_application($string);//end application execution with a recursive exit() function, like yo_exit
 
 }
 
